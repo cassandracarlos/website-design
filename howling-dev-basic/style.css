@@ -1,0 +1,920 @@
+/*
+Theme Name: Howling Dev Basic
+Theme URI: 
+Author: Dan Hunt
+Author URI: https://howlingdev.net/
+Description: A theme for blogs with custom logos, custom menus and custom footer widgets.
+Version: 4.3
+Requires at least: 5.0
+Tested up to: 6.0
+Requires PHP: 7.0
+Tags: blog, custom-logo, custom-menu, featured-images, footer-widgets
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: howling-dev-basic
+Domain Path: /languages
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Howling Dev Basic WordPress Theme, Copyright (C) 2022 Dan Hunt
+Howling Dev Basic is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, GPLv2 or later
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see < http://www.gnu.org/licenses/ >.
+*/
+
+/*dh-style.css*/
+:root {
+	--primary-color: #4a5945;
+ 	--secondary-color: #6C757D;
+ 	--tertiary-color: #594554;
+	/* Default size of chrome scrollbar is 17px */
+	/* JS function is running to change --hdb-scrollbar-size to current scrollbar size */
+	--hdb-scrollbar-size: 17px;
+
+ 	--heading-font: 'Poppins', Arial;
+ 	--body-font: "Nunito", Arial;
+}
+
+/* reset.css */
+/* Allow percentage-based heights */
+html, body {
+  height: 100%;
+}
+
+body {
+	word-spacing: 3px;	
+}
+
+body,h1,h2,h3,h4,h5,h6,p,
+figure, figcaption,
+blockquote,
+dl,
+dd {
+  overflow-wrap: break-word;
+	line-height: 2; /*Double Space*/
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	max-width: 100%;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var,
+samp {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 1em;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+
+/* basics.css */
+h1:not(#wpwrap), h2, h3, h4, h5, h6 {
+	font-family: var(--heading-font);	
+}
+
+p {
+	font-family: var(--body-font);
+	font-size: 1.25em;
+	word-spacing: 3px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a:link, a:visited {
+	color: #1034a6;
+	text-decoration: underline;
+	overflow-wrap: break-word;
+}
+
+a:hover, a:active {
+	color: #0197f6;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+	margin-top: .5em;	
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+	margin-top: .25em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+.alignfull {
+	max-width: none !important;
+	width: calc(100vw - var(--hdb-scrollbar-size)) !important;
+	margin-left: calc(50% - 50vw + (var(--hdb-scrollbar-size) / 2)) !important;
+	margin-right: calc(50% - 50vw + (var(--hdb-scrollbar-size) / 2)) !important;
+}
+
+.alignwide {
+		max-width: 1000%;
+		margin-right: calc(25% - 25vw);
+		margin-left: calc(25% - 25vw);
+		width: auto;
+	}
+
+/* The purpose of this is to help page links under the img that is in a p parent element appear under the img */
+p::after {
+	content: "";
+  	clear: both;
+  	display: table;
+}
+
+/* This is to help the page links in 'clearing floats' to appear under the img that is floated left above this */
+.page-links {
+	clear: both;
+	margin-bottom: 1em;	
+}
+
+/* button.css */
+.wp-block-button__link {
+	font-family: var(--body-font);
+	font-weight: 600;
+  	font-size: 1.1em;
+  	padding: 10px 16px;
+  	margin: 10px 0;
+		color: white;
+  	background: var(--primary-color) !important;
+  	border: 4px solid var(--secondary-color) !important;
+  	border-radius: 5px !important;
+  	cursor: pointer;
+  	outline: none;
+}
+
+.wp-block-button__link:hover, .wp-block-button__link:active {
+	text-decoration: none;
+	color: var(--primary-color) !important;
+	background: white !important;
+}
+
+.is-style-outline .wp-block-button__link {
+	color: var(--primary-color) !important;
+	background: white !important;
+}
+
+.is-style-outline .wp-block-button__link:hover, .wp-block-button__link:active {
+	text-decoration: none;
+	color: white !important;
+	background: var(--primary-color) !important;
+}
+
+.is-style-squared .wp-block-button__link  {
+	border-radius: initial !important;
+}
+
+.wp-block-button a {
+	color: white;
+	text-decoration: none;
+}
+
+/********************************************************* Skip Link *****************************************************************/
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+.screenreader-text:focus {
+  color: black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+}
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	overflow-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/********************************************************** Title Area **************************************************************/
+
+.hd-title { 
+	padding: 3em 0;
+	color: white;
+	text-align: center;
+	margin-bottom: 2em;
+	background: hsla(315, 13%, 31%, 1);
+	background: linear-gradient(90deg, hsla(315, 13%, 31%, 1) 0%, hsla(290, 56%, 56%, 1) 100%);
+	background: -moz-linear-gradient(90deg, hsla(315, 13%, 31%, 1) 0%, hsla(290, 56%, 56%, 1) 100%);
+	background: -webkit-linear-gradient(90deg, hsla(315, 13%, 31%, 1) 0%, hsla(290, 56%, 56%, 1) 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#594554", endColorstr="#b84fce", GradientType=1 );
+}
+
+.title-text {
+    font-size: 3em;
+    margin: .25em 0;
+    text-shadow: 4px 3px 0px #000, 9px 8px 0px rgba(0,0,0,0.15);
+}
+/********************************************************** End Title Area **************************************************************/
+
+
+/*********************************************************** Pagination ********************************************/
+.nav-links {
+	margin: 3em 0em 1em 0em;
+}
+
+.page-numbers {
+	padding: .7em;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: var(--primary-color);
+	color: white;
+}
+
+@media(max-width: 576px) {
+	.page-numbers {
+		padding: .2em;
+		margin-top: 1em;
+	}
+}
+
+a.page-numbers {
+	color: white;
+}
+
+.page-numbers.current {
+	color: white;
+	background-color: var(--tertiary-color);
+}
+
+/* Style for page links at bottom of page */
+	.pages {
+		margin: 1.5em 0;
+	}
+
+
+
+
+@media only screen and (max-width: 576px) {
+	
+	label {
+		display: block;
+	}
+
+	input, textarea {
+	max-width: 90%;
+	}		
+
+}
+
+
+/* This sets the extra wide images to fit in samller screens */
+div[id^="attachment"] {
+	max-width: 90%;
+}
+
+/* For blog page "Block: Gallery" */
+ figcaption {
+ 	font-size: .75em;
+ 	text-align: center;
+ 	margin-top: 1em;
+ }
+
+figure.wp-block-gallery.alignleft {	
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	margin-right: 2em;
+}
+
+.hd-pagination {
+	display: flex;
+	justify-content: center;
+}
+
+/* blog-card.css */
+	.hd-blog-card {
+		width: 100%;
+		margin: 3em auto;
+		display: flex;
+		flex-direction: row;
+		border-bottom: 3px solid black;
+		border-right: 3px solid black;
+	}
+
+	.hd-blog-card-whole {
+		width: 100%;
+		margin: 0 2em 0 0;
+	}
+
+	.hd-blog-card-left {
+		width: 65%;
+		margin: 0;
+	}
+
+	.hd-blog-card-right {
+		width: 35%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hd-post-image {
+		margin: 1em 0;
+	}
+
+	.hd-blog-card-category {
+		font-size: .75em;
+		margin: 0 0 .25em;
+	}
+
+	.hd-blog-card-title {
+		font-size: 2em;
+		color: black;
+		margin: 0;
+	}
+
+	.hd-blog-card-title a {
+		color: black;
+	}
+
+	hd-blog-card-meta {
+		font-size: .75em;
+	}
+
+	@media screen and (max-width: 992px){
+		.hd-blog-card {
+			flex-direction: column;
+		}
+
+		.hd-blog-card-right {
+			order: 1;
+			width: 100%;
+			justify-content: left;
+		}
+
+		.hd-blog-card-left {
+			order:  2;
+			width: 100%;
+		}
+
+		.hd-blog-card-right-no-img {
+			display: none;
+		}
+
+		.hd-blog-card p {
+			margin-right: 1em;
+		}
+	}
+	
+	@media screen and (max-width: 576px){
+		/* Give a little margin on mobile */
+		article[class^="post-"] {
+			margin: 0 .5em;
+		}
+	}
+
+/*************************************************** Search Form search.php **********************************/
+.search-field {
+	margin-bottom: 1em;
+	width: 25%;	
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+	background: #f9f9f9;
+	transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.search-field:focus {
+  background: #ffffff;
+}
+
+.search-submit {
+    background-color: var(--primary-color) !important;
+    color: white;
+    border: 2px solid var(--secondary-color) !important;
+    width: 25% !important;
+}
+
+.search-submit:hover {
+    background-color: white !important;
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color) !important;
+}
+/*********************************************************************************************************/
+.hd-featured-image {
+	margin: 2em auto;
+}
+
+.hd-featured-image img {
+	margin-inline: auto;
+}
+
+	figure {
+		/* To help images that are in figure that have style="width: 1200px"; */
+		max-width: 100%;
+		margin: 1em 0;
+	}
+
+	.wp-block-audio {
+		margin-top: 2em;
+	}
+
+	/* This fixes the issue of twitter tweet on block category:Embeds.  */
+	/* It is in a alignwide container as a figure the figcaption is centered and the image was all the way to the left. */
+	figure .twitter-tweet {
+		margin-inline: auto;
+	}
+
+/* This styles the class from register block style in functions.php */
+.is-style-boldest {
+	font-weight: 900;
+}
+
+
+/* wp-block-cover.css */
+
+/* From 2021 style.css */
+
+/* Variables */
+:root {
+	/* Headings */
+	#--heading--letter-spacing-h2: var(--global--letter-spacing);
+	#--heading--line-height-h2: var(--global--line-height-heading);
+	
+	/* Colors */
+	#--global--color-dark-gray: #28303d;
+	#--global--color-primary: var(--global--color-dark-gray);
+
+	/* Mint, default body background */
+	#--global--color-border: var(--global--color-primary);
+
+	/* Spacing */
+	--global--spacing-unit: 20px;
+	--global--spacing-measure: unset;
+	--global--spacing-horizontal: 25px;
+	--global--spacing-vertical: 30px;
+
+	/* Elevation */
+	--global--elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+	/* Cover block */
+	--cover--height: calc(15 * var(--global--spacing-vertical));
+	--cover--color-foreground: var(--global--color-white);
+	--cover--color-background: var(--global--color-black);
+
+	--wp--style--color--link: white;
+
+	--separator--height: 1px;	
+}
+/**********************************************************************************************************************/
+.wp-block-cover,
+.wp-block-cover-image {
+	background-color: var(--cover--color-background);
+	min-height: var(--cover--height);
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	/* default & custom background-color */
+
+	/* Treating H2 separately to account for legacy /core styles */
+
+	/* Block Styles */
+
+	/* The background color class is used just for the overlay, and does not need to be applied to the inner container. */
+}
+
+.wp-block-cover:not(.alignwide):not(.alignfull),
+.wp-block-cover-image:not(.alignwide):not(.alignfull) {
+	clear: both;
+}
+
+.wp-block-cover.alignfull,
+.wp-block-cover-image.alignfull {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-cover .wp-block-cover__inner-container,
+.wp-block-cover .wp-block-cover-image-text,
+.wp-block-cover .wp-block-cover-text,
+.wp-block-cover-image .wp-block-cover__inner-container,
+.wp-block-cover-image .wp-block-cover-image-text,
+.wp-block-cover-image .wp-block-cover-text {
+	color: currentColor;
+	#margin-top: var(--global--spacing-vertical);
+	#margin-bottom: var(--global--spacing-vertical);
+}
+
+.wp-block-cover .wp-block-cover__inner-container a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover .wp-block-cover-image-text a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover .wp-block-cover-text a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover-image .wp-block-cover__inner-container a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover-image .wp-block-cover-image-text a:not(.wp-block-button__link):not(.wp-block-file__button),
+.wp-block-cover-image .wp-block-cover-text a:not(.wp-block-button__link):not(.wp-block-file__button) {
+	color: currentColor;
+}
+
+.wp-block-cover .wp-block-cover__inner-container .has-link-color a,
+.wp-block-cover .wp-block-cover-image-text .has-link-color a,
+.wp-block-cover .wp-block-cover-text .has-link-color a,
+.wp-block-cover-image .wp-block-cover__inner-container .has-link-color a,
+.wp-block-cover-image .wp-block-cover-image-text .has-link-color a,
+.wp-block-cover-image .wp-block-cover-text .has-link-color a {
+	color: var(--wp--style--color--link, var(--global--color-primary));
+}
+
+.wp-block-cover:not([class*=background-color]) .wp-block-cover__inner-container,
+.wp-block-cover:not([class*=background-color]) .wp-block-cover-image-text,
+.wp-block-cover:not([class*=background-color]) .wp-block-cover-text,
+.wp-block-cover-image:not([class*=background-color]) .wp-block-cover__inner-container,
+.wp-block-cover-image:not([class*=background-color]) .wp-block-cover-image-text,
+.wp-block-cover-image:not([class*=background-color]) .wp-block-cover-text {
+	color: white;
+}
+
+
+.wp-block-cover h2.has-text-align-left,
+.wp-block-cover-image h2.has-text-align-left {
+	text-align: left;
+}
+
+.wp-block-cover h2.has-text-align-center,
+.wp-block-cover-image h2.has-text-align-center {
+	text-align: center;
+}
+
+.wp-block-cover h2.has-text-align-right,
+.wp-block-cover-image h2.has-text-align-right {
+	text-align: right;
+}
+
+.wp-block-cover .wp-block-cover__inner-container,
+.wp-block-cover-image .wp-block-cover__inner-container {
+	width: calc(100% - 2 * var(--global--spacing-vertical));
+}
+
+.wp-block-cover .wp-block-cover__inner-container > *,
+.wp-block-cover-image .wp-block-cover__inner-container > * {
+	margin-top: calc(0.666 * var(--global--spacing-vertical));
+	margin-bottom: calc(0.666 * var(--global--spacing-vertical));
+}
+@media only screen and (min-width: 482px) {
+
+	.wp-block-cover .wp-block-cover__inner-container > *,
+	.wp-block-cover-image .wp-block-cover__inner-container > * {
+		margin-top: var(--global--spacing-vertical);
+		margin-bottom: var(--global--spacing-vertical);
+	}
+}
+
+.wp-block-cover .wp-block-cover__inner-container > *:first-child,
+.wp-block-cover-image .wp-block-cover__inner-container > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-cover .wp-block-cover__inner-container > *:last-child,
+.wp-block-cover-image .wp-block-cover__inner-container > *:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-cover.alignleft,
+.wp-block-cover.alignright,
+.wp-block-cover-image.alignleft,
+.wp-block-cover-image.alignright {
+	margin-top: 0;
+}
+
+.wp-block-cover.alignleft > *,
+.wp-block-cover.alignright > *,
+.wp-block-cover-image.alignleft > *,
+.wp-block-cover-image.alignright > * {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-left: 50px;
+	padding-right: 50px;
+	width: 100%;
+}
+
+.wp-block-cover.has-left-content,
+.wp-block-cover.has-right-content,
+.wp-block-cover-image.has-left-content,
+.wp-block-cover-image.has-right-content {
+	justify-content: center;
+}
+
+.wp-block-cover.is-style-twentytwentyone-border,
+.wp-block-cover-image.is-style-twentytwentyone-border {
+	border: 3px solid darkgray;
+}
+
+.wp-block-cover[class*=-background-color][class] .wp-block-cover__inner-container,
+.wp-block-cover-image[class*=-background-color][class] .wp-block-cover__inner-container {
+	background-color: unset;
+}
+
+/* quote.css */
+blockquote {
+	position: relative;
+	padding: 2em !important;
+	background-color: #dcdcdc;
+	border-left: 5px solid black !important;
+	width: 80%;
+	margin: auto !important;
+}
+
+blockquote.is-style-large {
+	padding: 2em !important;
+}
+
+blockquote > *:first-child {
+	margin-top: 0;
+	margin-left: 5rem;
+}
+
+blockquote > *:last-child {
+	margin-bottom: 0;
+}
+
+blockquote.alignleft,
+blockquote.alignright {
+	padding-left: inherit;
+}
+
+blockquote.alignleft p,
+blockquote.alignright p {
+	max-width: inherit;
+	width: inherit;
+}
+
+blockquote strong {
+	font-weight: 400px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 80px;
+	font-family: Georgia;
+	position: absolute;
+	top: 0;
+	margin-top: -.2em;
+	left: .5em;
+}
+
+blockquote.has-text-align-right:before {
+	display: none;
+}
+
+.wp-block-quote.has-text-align-right {
+	border-left: none !important;
+}
+
+blockquote.has-text-align-right > p:before {
+	content: "\201C";
+  font-size: 80px;
+	font-family: Georgia;
+	position: absolute;
+	top: .5em;
+	right: 1.75em;
+}
+
+.wp-block-pullquote {
+    padding: 2em;
+    border-width: 5px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    color: currentColor;
+    border-color: currentColor;
+    position: relative;
+   }
+
+   .wp-block-pullquote blockquote {
+			border: 0;
+			margin-left: auto;
+			margin-right: auto;
+	   }
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	background-color: inherit;	
+}
+
+figure.wp-block-pullquote {
+	width: 80%;
+	margin: 3em auto;
+}
+
+/* howling-dev-basic-posts-gallery.css */
+.gallery {
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;	
+	width: 100%;
+}
+
+.gallery-icon img {
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 5px 5px 5px black;
+	border-radius: 5px;
+	width: 100%;
+	height: auto;
+}
+
+/* Kepp the image from strectching out too much and looking grainy */
+.gallery-icon .size-thumbnail {
+	max-width: 200px;
+}
+
+/* When Calculating column width, add padding and margin then multiply * 2 and subtract from desired width */
+
+.gallery-columns-1 .gallery-item {
+	flex: 98%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 98%;
+}
+
+.gallery-columns-2 .gallery-item {
+	flex: 48%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 48%;
+}
+
+.gallery-columns-3 .gallery-item {
+	flex: 31.33%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 31.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	flex: 23%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 23%;
+}
+
+.gallery-columns-5 .gallery-item {
+	flex: 18%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 18%;
+}
+
+.gallery-columns-6 .gallery-item {
+	flex: 14.6%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 14.6%;
+}
+
+.gallery-columns-7 .gallery-item {
+	flex: 12.25%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 12.25%;
+}
+
+.gallery-columns-8 .gallery-item {
+	flex: 10.5%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 10.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	flex: 9.11%;
+	padding: 1%;
+	margin: 1%;
+	max-width: 9.11%;
+}
+
+/* howling-dev-basic-password-protected.css */
+/* This css was implemented for Password Protected blog page */
+
+input[name="post_password"] {
+	margin-left: 2em;
+}
+
+.post-password-required + div .row .col .comment {
+	display: none;
+}
+
+.wp-caption {
+	font-size: 13px;
+}
+/* For the image captions in page image alignment */
+.wp-caption-text {
+	font-size: 13px;
+}
+
+.bypostauthor {
+	background-color: #e7f8fb;
+}
