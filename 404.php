@@ -1,18 +1,11 @@
-<?php
-/**
- * The template for displaying 404 pages (not found).
- * 
- * @package Edison
- */
-
- get_header(); ?>
-
-    <main id="main" class="site-main" role="main">
-        <section class="error-404 not-found text-center">
-            <header class="page-header">
-                <h2 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found. ' ); ?></h2>
-            </header>
-        </section>
-    </main>
-
- <?php get_footer(); ?>
+<?php get_header(); ?>
+<article id="post-0" class="post not-found">
+<header class="header">
+<h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Not Found', 'blankslate' ); ?></h1>
+</header>
+<div class="entry-content" itemprop="mainContentOfPage">
+<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
+<?php get_search_form(); ?>
+</div>
+</article>
+<?php get_footer(); ?>
