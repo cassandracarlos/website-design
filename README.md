@@ -1,3 +1,25 @@
+## wp (wordpress) theme
+1. a basic template for a blog website
+2. the minimum possible theme for a working site
+3. legible code with comments and README.md sitemap
+
+### file structure:
+wp-theme
+* index.php
+* style.css
+* README.md
+* functions.php
+* page.php
+* header.php
+* footer.php
+* single.php
+* 404.php
+
+### how to use theme
+(to be added)
+
+---
+
 # Build your own WordPress theme
 
 This simple WordPress theme is functional as a blog, but is intentionally left as plain as possible. It is designed as a foundation to be built upon into unique themes. Instructions for editing will be added at a later date.
