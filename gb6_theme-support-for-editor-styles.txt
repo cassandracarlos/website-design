@@ -1,0 +1,9 @@
+WordPress allows you to add support for editor styles, which will apply your theme's styles to the Gutenberg editor, providing a more accurate representation of how content will appear on the front end.
+
+In your functions.php, add support for editor styles using the add_theme_support() function:
+
+php
+Copy code
+add_theme_support('editor-styles');
+add_editor_style('editor-style.css');
+Create an editor-style.css file in your theme directory and define the styles you want to apply in the editor. These styles should match the front-end design to provide a consistent editing experience.
