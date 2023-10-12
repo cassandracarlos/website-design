@@ -1,9 +1,0 @@
-To include your CSS and JavaScript files in your theme, you should use the wp_enqueue_style() and wp_enqueue_script() functions. Here's how to enqueue styles in your functions.php:
-
-php
-Copy code
-function enqueue_theme_styles() {
-    wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
-}
-add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
-You can similarly enqueue JavaScript files by modifying this code and using wp_enqueue_script(). Enqueuing your styles and scripts this way ensures they are loaded in the correct order and won't cause conflicts with other plugins or themes.

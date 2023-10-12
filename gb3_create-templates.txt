@@ -1,8 +1,0 @@
-Templates are essential for controlling the layout of your theme. You can create custom template files for different content types. For instance:
-
-single.php: This template file is used for displaying single post content.
-page.php: It's used for single pages.
-archive.php: This is used for archive pages, like category or tag archives.
-You can also create template files for custom post types if you've defined them in your functions.php. The template hierarchy in WordPress will determine which template file to use based on the content being displayed.
-
-To create a custom template for a specific content type, you can copy one of the existing templates (e.g., page.php), modify it to suit your needs, and save it with the appropriate name.
