@@ -1,0 +1,23 @@
+- Article 1: 2D Game Development Basics
+    - Introduction to 2D game development.
+    - Explanation of concepts like sprites, collision detection, and basic physics.
+    - Introduction to tools and frameworks for 2D game development.
+- Article 2: Your First 3D Game
+    - Introduction to 3D game development, including 3D modeling and lighting.
+    - Step-by-step walkthrough for creating a basic 3D game.
+    - Explanation of the 3D assets and materials used in the game.
+
+## Module 5: Advanced Topics
+
+- Article 1: Game Mechanics and Gameplay
+    - In-depth discussion of various game mechanics, including character movement, AI, and player interactions.
+    - Real-world examples of games with innovative mechanics.
+    - Tips on how to design and implement effective game mechanics.
+- Article 3: Testing and Debugging
+    - Detailed guide on testing methodologies and debugging techniques.
+    - Introduction to testing tools commonly used in game development.
+    - Tips on how to ensure a polished and bug-free game.
+
+---
+
+Creating a Notion template for running an e-commerce business is a great way to stay organized and manage various aspects of your business. Below is an outline that you can use as a starting point.

@@ -1,0 +1,4 @@
+- Article 1: Game Design Principles
+    - Introduction to fundamental game design principles.
+    - Discussion of the importance of player experience, game mechanics, and storytelling.
+    - Examples of well-designed games that illustrate these principles.

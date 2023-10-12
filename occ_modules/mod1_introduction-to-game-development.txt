@@ -1,0 +1,6 @@
+1. Intro to game development. The excitement and opportunities in GD, as well as the essential tools and skills needed to make a game.
+
+2. Understanding Game Logic: what IS game logic? Key concepts like:
+    a. game loops
+    b. input handling
+    c. rendering
