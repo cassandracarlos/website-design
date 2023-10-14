@@ -1,8 +1,0 @@
-- Article 1: Introduction to Programming
-    - Introduction to programming.
-    - Explanation of variables, data types, and basic syntax.
-    - Simple code examples to illustrate programming concepts.
-- Article 3: Your First Game - "Hello, World!"
-    - Walkthrough on creating a simple text-based game.
-    - Step-by-step guide on setting up the development environment and writing code.
-    - Explanation of how the game works.
