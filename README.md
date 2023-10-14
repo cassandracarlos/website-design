@@ -28,3 +28,12 @@ These are the different page types on Coding Corner:
 8. (Generic Posts) [^8]
 
 ---
+
+[^1] -
+[^2] -
+[^3] -
+[^4] -
+[^5] -
+[^6] -
+[^7] -
+[^8] -
