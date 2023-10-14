@@ -1,8 +1,6 @@
 # ourcodingcorner.com
 Custom WordPress (classic) theme for my blog [Coding Corner](https://ourcodingcorner.com).
 
----
-
 ## index.php
 
 ```
@@ -28,7 +26,12 @@ Custom WordPress (classic) theme for my blog [Coding Corner](https://ourcodingco
 * `<title><?php bloginfo( 'name' ); ?><?php wp_title( 'I', true, 'left' ); ?></title>` generates the document title — includes the site name defined in WordPress settings and the post or page title (if applicable)
 * `<?php wp_head(); ?>` is a hook[^2] for adding additional elements — like stylesheets or scripts — to the `<head>` section (plugins and themes can use this hook to include necessary resources)
 
+```
+<body <?php body_class(); ?>>
+```
+* `<body <?php body_class(); ?>>` opens the body section and applies classes based on the type of page being displayed — single post, archive, etc  — (this is useful for applying specific styles based on the page type)
+
 ---
 
 [^1]: `<html <?php language_attributes(); ?>>` is a PHP function that outputs the language attributes for the HTML tag — which helps with language localization
-[^2]: `<?php wp_head(); ?>` is a hook[^2] for adding additional elements — like stylesheets or scripts — to the `<head>` section (plugins and themes can use this hook to include necessary resources)
+[^2]: `<?php wp_head(); ?>` is a hook for adding additional elements — like stylesheets or scripts — to the `<head>` section (plugins and themes can use this hook to include necessary resources)
