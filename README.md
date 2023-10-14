@@ -31,7 +31,50 @@ Custom WordPress (classic) theme for my blog [Coding Corner](https://ourcodingco
 ```
 * `<body <?php body_class(); ?>>` opens the body section and applies classes based on the type of page being displayed — single post, archive, etc  — (this is useful for applying specific styles based on the page type)
 
+```
+<header>
+    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+    <p><?php bloginfo( 'description' ); ?></p>
+</header>
+```
+
+* `<header>` is the header section of your website.
+* `<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>`  displays the site's name as a link to the home page. home_url() gets the URL of the site's home page esc_url() is a security measure that ensures the URL is properly formatted
+* `<p><?php bloginfo( 'description' ); ?></p>` displays the site's tagline or description
+
+```
+<nav>
+    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+</nav>
+```
+
+* `<nav>` is the navigation section
+* `<?php wp_nav_menu( array ( 'theme_location' => 'primary' ) ); ?>` is a WordPress function that generates a navigation menu. It specifies that it should use the menu location called 'primary'. This menu location should be defined in the theme's functions.php file
+
+```
+<main>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <article <?php post_class(); ?>>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <?php the_content(); ?>
+        </article>
+    <?php endwhile; endif; ?>
+</main>
+<aside>
+    <?php dynamic_sidebar( 'sidebar' ); ?>
+</aside>
+<footer>
+    <?php wp_footer(); ?>
+</footer>
+</body>
+</html>
+```
+
 ---
 
 [^1]: `<html <?php language_attributes(); ?>>` is a PHP function that outputs the language attributes for the HTML tag — which helps with language localization
 [^2]: `<?php wp_head(); ?>` is a hook for adding additional elements — like stylesheets or scripts — to the `<head>` section (plugins and themes can use this hook to include necessary resources)
+[^3]:
+[^4]:
+[^5]:
+[^6]:
