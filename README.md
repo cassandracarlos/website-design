@@ -1,6 +1,8 @@
 # ourcodingcorner.com
 Custom WordPress (classic) theme for my blog [Coding Corner](https://ourcodingcorner.com).
 
+![index.php snippets from ChatGPT](/images/gpt_snippet.png)
+
 ## index.php
 
 ```
