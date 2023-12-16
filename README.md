@@ -2,6 +2,8 @@
 
 Personal notes on theme-building for WordPress websites.
 
+## Index
+
 ```
 .
 ├── theme-design
