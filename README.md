@@ -1,4 +1,4 @@
-# WordPress Theme
+# Theme-Building for WordPress
 
 Personal notes on theme-building for WordPress websites.
 
