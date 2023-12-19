@@ -1,0 +1,7 @@
+// Define the WordPress theme functions and styles
+function my_blog_theme_setup() {
+
+    // Add theme support for title tag
+    add_theme_support('title-tag')
+    
+}
