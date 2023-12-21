@@ -1,4 +1,14 @@
-Ensure your success with these restaurant website features:
+<?php
+// Define the WordPress theme functions and styles
+function my_blog_theme_setup() {
+
+    // Add theme support for title tag
+    add_theme_support('title-tag')
+    
+}
+?>
+
+<!--Ensure your success with these restaurant website features:
 What Makes a Good Restaurant Website?
 Most Important Features of Restaurants’ Websites
 Good Restaurant Domain Name
@@ -19,4 +29,4 @@ Restaurant website features directly influence how much food your location sells
 
 /**/
 
-http://orasushi.com/menu1.php
+http://orasushi.com/menu1.php-->

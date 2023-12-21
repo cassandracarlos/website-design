@@ -1,8 +1,6 @@
 # Theme-Building for WordPress
 
-Personal notes on theme-building for WordPress websites.
-
-## Index
+Personal notes about building classic WordPress themes.
 
 ```
 .
