@@ -1,0 +1,46 @@
+
+WordPress 6.5, scheduled for release on March 26th, 2024, brings several significant features and improvements. Key highlights include:
+
+1. Design Tools:
+
+Introduction of the Font Library for easy global font management.
+Support for Appearance Tools in Classic Themes, providing more design options.
+Syncing specific blocks and attributes of patterns for consistent design across content.
+Section-specific theme.json and Colorways for granular control over styling.
+
+2. Adoption Pathways:
+
+Classic Themes now have support for Appearance Tools, unlocking more design options.
+Improved Pattern management with Classic Themes, allowing easy preview and management of patterns.
+
+3. Foundational Experience:
+
+New data views for templates, template parts, and patterns in the Site Editor, offering a richer user experience.
+Robust revisions with the ability to view current vs. proposed style revisions.
+
+4. Customization and APIs:
+
+Customization of the Navigation block mobile overlay for responsive controls.
+Introduction of new APIs like Interactivity API, Custom Fields API, and Block Binding API.
+PHP compatibility work for alignment with PHP versions, including 8.0, 8.1, and 8.2.
+
+5. Rollback and Dependencies:
+
+Rollback for plugin and theme updates to enhance safety during automatic updates.
+Handling of plugin dependencies to provide a clear pathway for installing required plugins.
+
+6. Performance Improvements:
+
+Ongoing performance improvements, including a revised translation loader and enhanced performance for templates and patterns.
+Specific focus on typing performance with major improvements expected.
+
+7. Bug Fixes and UX Iterations:
+
+Numerous bug fixes and UX iterations across various components and features.
+Planned iterations for List View, background image support for the Group block, and refining block renaming.
+
+8. Infrastructure Upgrade:
+
+Raising the minimum required version of MySQL from 5.0 to 5.5.5 for enhanced security and support.
+
+It's important to note that while these features are actively pursued, not all may make it into the final release of WordPress 6.5. The article encourages users to follow tracking issues for more detailed information on each feature's progress.
